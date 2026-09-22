@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+<link href="https://db.onlinewebfonts.com/c/7cc6719bd5f0310be3150ba33418e72e?family=Comic+Sans+MS" rel="stylesheet">
 <style>
   :root {
     --bg: #0a0c0e;
@@ -18,6 +20,16 @@
     --border: rgba(0, 174, 255, 0.18);
   }
 
+  @font-face {
+    font-family: "Comic Sans MS";
+    src: url("https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.eot");
+    src: url("https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.svg#Comic Sans MS")format("svg");
+}
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html { scroll-behavior: smooth; }
@@ -25,7 +37,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Comic Sans MS', sans-serif;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -62,8 +74,6 @@
     * { animation: none !important; transition: none !important; }
   }
 
-  /* ---------- top nav ---------- */
-
   .top-nav {
     position: fixed;
     top: 0;
@@ -82,7 +92,7 @@
     align-items: center;
     max-width: 620px;
     margin: 0 auto;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
   }
 
   .nav-logo {
@@ -94,7 +104,7 @@
 
   .nav-logo .glyph {
     color: var(--accent);
-    text-shadow: 0 0 10px rgba(0, 225, 255, 0.5);
+    text-shadow: 0 0 10px rgba(8, 8, 8, 0.5);
   }
 
   .nav-links {
@@ -122,12 +132,14 @@
     width: 100%;
     max-width: 620px;
     position: relative;
-    left:5%;
     z-index: 1;
+    margin: 0 auto;
+    text-align: center;
   }
 
   #profile {
     animation: settle 0.4s ease-out;
+    text-align: center;
   }
 
   @keyframes settle {
@@ -136,24 +148,20 @@
   }
 
   .handle {
-    font-family: "Azeret Mono", monospace;
-    font-weight: 700;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: 800;
     font-size: clamp(52px, 12vw, 96px);
     line-height: 0.95;
     color: var(--text);
     letter-spacing: -2px;
-    text-shadow: 0 0 24px rgba(0, 225, 255, 0.25);
+    text-align: center;
+    text-shadow: 0 0 24px rgba(8, 8, 8, 0.25);
   }
 
   .handle .glyph {
     color: var(--accent);
-    text-shadow: 0 0 18px rgba(0, 225, 255, 0.65), 0 0 40px rgba(0, 225, 255, 0.3);
     animation: flicker 6s linear infinite;
   }
-
-  /*.glyph {
-      font-family: "Dancing Script", cursive;
-  }*/
 
   @keyframes flicker {
     0%, 92%, 94%, 100% { opacity: 1; }
@@ -163,6 +171,7 @@
   .meta-row {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 14px;
     margin-top: 12px;
     flex-wrap: wrap;
@@ -171,10 +180,11 @@
   a {
     color: var(--accent);
     text-decoration: none;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
   }
 
   #uptime {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     font-size: 12px;
     color: var(--accent);
     border: 1px solid var(--border);
@@ -185,7 +195,7 @@
   }
 
   #tiktok {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 3px;
@@ -204,7 +214,7 @@
   }
 
   #discord {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     font-size: 12px;
     padding: 4px 10px;
     border-radius: 3px;
@@ -222,14 +232,44 @@
     color: transparent;
   }
 
+  #github {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: #1f1f1f;
+    display: inline-block;
+  }
+
+  #github,
+  #github a,
+  #github span {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  #github a {
+    color: #eae5dc;
+    text-decoration: none;
+  }
+
+  #github span {
+    color: #eae5dc;
+    background: none;
+    background-image: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+  }
+
   footer {
     margin-top: 15px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     font-size: 12px;
     color: var(--muted);
   }
-
-  /*  badge rails  */
 
   .badge-rail {
     position: fixed;
@@ -240,6 +280,7 @@
     align-items: center;
     gap: 12px;
     z-index: 1;
+    width: 88px;
   }
 
   .badge-rail-left { left: 240px; }
@@ -281,14 +322,15 @@
   <div id="profile">
 <iframe src="https://free.timeanddate.com/clock/ial3gbou/n32/fn7/fs18/fc00e1ff/tct/pct/ftb/bls0/brs0/bts0/bbs0/tt0" frameborder="0" width="447" height="27" allowtransparency="true"></iframe>
 
-    <h1 class="handle">bach<span class="glyph">.wtf</span></h1>
+    <h1 class="handle">bach.<span class="glyph">wtf</span></h1>
     <div class="meta-row">
-      <span id="uptime">67 legend</span>
+      <span id="uptime"><a href="https://breakium.com/">breakium.com</a></span>
       <span id="tiktok"><span>tiktok: @b4chadoo</span></span>
       <span id="discord"><span>discord: bachadoo</span></span>
+      <span id="github"><a href="https://github.com/isolateam"><span>github: isolateam</span></a></span>
     </div>
     <footer>copyright @ <a href="https://b4ch.wtf/">b4ch.wtf</a></footer>
-  </div>\
+  </div>
 </div>
 
 <div class="badge-rail badge-rail-right">
@@ -299,8 +341,6 @@
   <img src="gifs/bach.gif" class="badge">
   <img src="gifs/notepad.gif" class="badge">
 </div>
-
-<script src="visuals.js"></script>
 
 </body>
 </html>

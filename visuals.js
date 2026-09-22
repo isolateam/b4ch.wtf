@@ -3,6 +3,10 @@
   const profileEl = document.getElementById('profile');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  if (!bootEl || !profileEl) {
+    return;
+  }
+
   const lines = [
     { text: '', ok: false },
   ];
